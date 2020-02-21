@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (!this.User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome to our website</h1>
+        <p>Enjoy your time :)</p>
+    </div>
+}
+else
+{
+<div class="jumbotron bg-primary w-75 mx-auto m-8">
+    <h2 class="font-weight-bold text-light font-italic text-center">Welcome, @this.User.Identity.Name</h2>
+    <hr class="bg-light" />
+    <h4 class="text-center text-light font-weight-bold">Enjoy using our application</h4>
+</div>
+}
+

@@ -1,0 +1,25 @@
+﻿@model  UserContragents.Models.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h1 class="text-center mt-4">About me</h1>
+<div class="container-fluid w-50 mt-5">
+    <table class="table table-borderless text-center  text-primary">
+        <thead>
+            <tr class="border-bottom">
+                <th scope="col">Username</th>
+                <td class="font-weight-bold">@Model.Username</td>
+            </tr>
+            <tr class="border-bottom">
+                <th scope="col">Name</th>
+                <td class="font-weight-bold">@Model.Name</td>
+            </tr>
+            <tr class="border-bottom">
+                <th scope="col">Password</th>
+                <td class="font-weight-bold">@Model.Password</td>
+            </tr>
+        </thead>
+    </table>
+</div>
+

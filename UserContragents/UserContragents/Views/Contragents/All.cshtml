@@ -1,0 +1,36 @@
+﻿@model  IEnumerable<UserContragents.Domain.Contragents>
+@{
+    ViewData["Title"] = "All";
+}
+
+<h1 class="text-center mt-4">All contragents</h1>
+
+<div class="d-flex justify-content-center mx-5 mt-3">
+    <table class="table table-hover text-center">
+        <thead>
+            <tr class="row">
+                <th scope="col" class="col-lg-2 suls-text-color">Name</th>
+                <th scope="col" class="col-lg-2 suls-text-color">Address</th>
+                <th scope="col" class="col-lg-2 suls-text-color">Email</th>
+                <th scope="col" class="col-lg-2 suls-text-color">DDS Number</th>
+                <th scope="col" class="col-lg-2 suls-text-color">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contragent in Model)
+            {
+            <tr class="row">
+                <td class="col-lg-2 suls-text-color">@contragent.Name</td>
+                <td class="col-lg-2 suls-text-color">@contragent.Address</td>
+                <td class="col-lg-2 suls-text-color">@contragent.Email</td>
+                <td class="col-lg-2 suls-text-color">@contragent.DDSNumber</td>
+                <td class="col-lg-2 suls-text-color">
+                    <a href="/Contragents/Details?id=@contragent.Id">View Details</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

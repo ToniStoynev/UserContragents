@@ -1,0 +1,25 @@
+﻿@model UserContragents.Models.ViewModels.ContragentDetaislViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-center font-weight-bold mx-5">Contragent Details</h1>
+<div class="d-flex justify-content-center w-75 mx-auto mt-5">
+    <table class="table table-responsive">
+        <thead class="bg-primary text-light font-weight-bold">
+            <tr class="text-center">
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">DDS Number</th>
+        </thead>
+        <tbody class="table-bordered table-active table-light  font-weight-bold">
+            <tr>
+                <td>@Model.Name</td>
+                <td>@Model.Address</td>
+                <td>@Model.Email</td>
+                <td>@Model.DDSNumber</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
